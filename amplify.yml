@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phase: build
+    preBuild:
+      commands:
+        - echo "Pre-build phase"
+        - echo "Installing dependencies"
+        - npm install
+    build:
+      commands:
+        - echo "Build phase"
+        - echo "Building the app"
+        - npm run build
+    artifacts:
+      baseDirectory: build
+      files:
+        - '**/*'
+    cache:
+      paths:
+        - node_modules/**/*
