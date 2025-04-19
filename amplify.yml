@@ -12,7 +12,7 @@ frontend:
         - echo "Building the app"
         - npm run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
