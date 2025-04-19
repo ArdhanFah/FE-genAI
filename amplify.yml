@@ -1,6 +1,6 @@
 version: 1
 frontend:
-  phase: build
+  phases:
     preBuild:
       commands:
         - echo "Pre-build phase"
@@ -11,10 +11,10 @@ frontend:
         - echo "Build phase"
         - echo "Building the app"
         - npm run build
-    artifacts:
-      baseDirectory: build
-      files:
-        - '**/*'
-    cache:
-      paths:
-        - node_modules/**/*
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
